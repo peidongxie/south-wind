@@ -1,0 +1,29 @@
+name: docs
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup environment
+        uses: actions/setup-node@v2
+        with:
+          cache: 'yarn'
+          node-version: '16'
+      - name: Install dependencies
+        run: yarn install
+      - name: Build project
+        run: yarn build
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: docs/.vuepress/dist
+          clean-exclude: CNAME
