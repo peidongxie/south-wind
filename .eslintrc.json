@@ -1,6 +1,6 @@
 {
   "env": {
-    "shared-node-browser": true
+    "browser": true
   },
   "extends": [
     "eslint:recommended",
@@ -8,13 +8,13 @@
     "plugin:vue/vue3-recommended",
     "plugin:prettier/recommended"
   ],
+  "globals": {},
   "parser": "vue-eslint-parser",
   "parserOptions": {
-    "parser": "@typescript-eslint/parser",
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+    "ecmaVersion": "latest"
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": [],
   "rules": {},
-  "ignorePatterns": ["docs/.vuepress/.*", "docs/.vuepress/dist"]
+  "settings": {},
+  "overrides": []
 }
