@@ -22,7 +22,7 @@
     "email": "peidongxie@outlook.com",
     "url": "https://github.com/peidongxie"
   },
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "build": "vuepress build docs",
     "dev": "vuepress dev docs",
@@ -30,8 +30,8 @@
     "lint": "eslint docs/.vuepress --ext .ts,.vue"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.31.2",
-    "@typescript-eslint/parser": "^4.31.2",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
     "@vuepress/bundler-vite": "2.0.0-beta.26",
     "@vuepress/plugin-back-to-top": "2.0.0-beta.26",
     "@vuepress/plugin-medium-zoom": "2.0.0-beta.26",
