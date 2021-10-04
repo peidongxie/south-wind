@@ -22,7 +22,7 @@
     "email": "peidongxie@outlook.com",
     "url": "https://github.com/peidongxie"
   },
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "build": "vuepress build docs",
     "dev": "vuepress dev docs",
@@ -45,7 +45,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^7.18.0",
     "husky": "^7.0.2",
-    "lint-staged": "^11.1.2",
+    "lint-staged": "^11.2.0",
     "prettier": "^2.4.1",
     "sort-package-json": "^1.52.0",
     "typescript": "^4.4.3",
