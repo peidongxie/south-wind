@@ -11,7 +11,8 @@
   "globals": {},
   "parser": "vue-eslint-parser",
   "parserOptions": {
-    "ecmaVersion": "latest"
+    "ecmaVersion": "latest",
+    "parser": "@typescript-eslint/parser"
   },
   "plugins": [],
   "rules": {},
