@@ -3,12 +3,60 @@
     <img class="image" :src="img" :alt="text" />
     <div class="info">
       <span class="info-top">{{ text }}</span>
-      <div class="info-bottom">
+      <span class="info-bottom">
         <time>{{ date || today }}</time>
         <button>
-          <a :href="img" :download="file">点击下载</a>
+          <a :href="img" :download="file">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                fill="currentColor"
+                d="
+                  M 216 0
+                  h 80
+                  c 13.3 0 24 10.7 24 24
+                  v 168
+                  h 87.7
+                  c 17.8 0 26.7 21.5 14.1 34.1
+                  L 269.7 378.3
+                  c -7.5 7.5 -19.8 7.5 -27.3 0
+                  L 90.1 226.1
+                  c -12.6 -12.6 -3.7 -34.1 14.1 -34.1
+                  H 192
+                  V 24
+                  c 0 -13.3 10.7 -24 24 -24
+                  z
+                  m 296 376
+                  v 112
+                  c 0 13.3 -10.7 24 -24 24
+                  H 24
+                  c -13.3 0 -24 -10.7 -24 -24
+                  V 376
+                  c 0 -13.3 10.7 -24 24 -24
+                  h 146.7
+                  l 49 49
+                  c 20.1 20.1 52.5 20.1 72.6 0
+                  l 49 -49
+                  H 488
+                  c 13.3 0 24 10.7 24 24
+                  z
+                  m -124 88
+                  c 0 -11 -9 -20 -20 -20
+                  s -20 9 -20 20
+                  s 9 20 20 20
+                  s 20 -9 20 -20
+                  z
+                  m 64 0
+                  c 0 -11 -9 -20 -20 -20
+                  s -20 9 -20 20
+                  s 9 20 20 20
+                  s 20 -9 20 -20
+                  z
+                "
+              ></path>
+            </svg>
+          </a>
         </button>
-      </div>
+      </span>
     </div>
   </div>
 </template>
@@ -53,12 +101,11 @@ export default defineComponent({
 <style>
 .photo {
   margin: 20px;
-  border-width: 1px;
+  background-color: var(--c-bg);
+  border-color: var(--c-border);
+  border-radius: 6px;
   border-style: solid;
-  border-color: #ebeef5;
-  border-radius: 4px;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  border-width: 1px;
   overflow: hidden;
 }
 
@@ -68,36 +115,29 @@ export default defineComponent({
 }
 
 .info {
-  padding: 14px;
+  padding: 16px;
 }
 
 .info-top {
-  color: #303133;
+  color: var(--c-text);
+  display: block;
   font-size: 16px;
-  font-weight: 400;
 }
 
 .info-bottom {
-  margin-top: 13px;
-  line-height: 12px;
-}
-
-.info-bottom > time {
-  color: #999;
-  font-size: 13px;
-  font-weight: 400;
+  margin-top: 8px;
+  color: var(--c-text-lightest);
+  display: block;
+  font-size: 14px;
 }
 
 .info-bottom > button {
   padding: 0;
+  border-width: 0;
+  height: 16px;
+  width: 16px;
   margin: 0;
-  float: right;
-  border-color: transparent;
   background: transparent;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: center;
-  line-height: 1;
-  white-space: nowrap;
+  float: right;
 }
 </style>
