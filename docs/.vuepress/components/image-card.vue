@@ -1,5 +1,5 @@
 <template>
-  <div class="photo">
+  <div class="card">
     <img class="image" :src="img" :alt="text" />
     <div class="info">
       <span class="info-top">{{ text }}</span>
@@ -99,7 +99,7 @@ export default defineComponent({
 </script>
 
 <style>
-.photo {
+.card {
   margin: 20px;
   background-color: var(--c-bg);
   border-color: var(--c-border);
