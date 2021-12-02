@@ -83,7 +83,7 @@ $ yarn dev
 
 ## 如何贡献
 
-欢迎提 [issue](https://github.com/peidongxie/south-wind/issues/new) 和 [PR](https://github.com/peidongxie/south-wind/compare)。
+欢迎提 [issue](https://github.com/peidongxie/south-wind/issues/new) 或 [PR](https://github.com/peidongxie/south-wind/compare)。
 
 ## 使用许可
 
