@@ -57,12 +57,14 @@ $ yarn
 本项目可以以开发模式启动。
 
 ```sh
+$ git clone https://github.com/peidongxie/south-wind
 $ npm run dev
 ```
 
 或者
 
 ```sh
+$ git clone https://github.com/peidongxie/south-wind
 $ yarn dev
 ```
 

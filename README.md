@@ -43,12 +43,14 @@ As a result, we built a static website and deployed it to GitHub Pages. In April
 This project uses Node.js and its package manager. Please make sure they are installed locally.
 
 ```sh
+$ git clone https://github.com/peidongxie/south-wind
 $ npm install
 ```
 
 or
 
 ```sh
+$ git clone https://github.com/peidongxie/south-wind
 $ yarn
 ```
 
