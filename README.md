@@ -44,6 +44,7 @@ This project uses Node.js and its package manager. Please make sure they are ins
 
 ```sh
 $ git clone https://github.com/peidongxie/south-wind
+$ cd south-wind
 $ npm install
 ```
 
@@ -51,6 +52,7 @@ or
 
 ```sh
 $ git clone https://github.com/peidongxie/south-wind
+$ cd south-wind
 $ yarn
 ```
 

@@ -58,6 +58,7 @@ $ yarn
 
 ```sh
 $ git clone https://github.com/peidongxie/south-wind
+$ cd south-wind
 $ npm run dev
 ```
 
@@ -65,6 +66,7 @@ $ npm run dev
 
 ```sh
 $ git clone https://github.com/peidongxie/south-wind
+$ cd south-wind
 $ yarn dev
 ```
 
