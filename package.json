@@ -31,8 +31,8 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.7.0",
-    "@typescript-eslint/parser": "^5.7.0",
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
     "@vuepress/bundler-vite": "^2.0.0-beta.29",
     "@vuepress/plugin-back-to-top": "^2.0.0-beta.29",
     "@vuepress/plugin-medium-zoom": "^2.0.0-beta.29",
