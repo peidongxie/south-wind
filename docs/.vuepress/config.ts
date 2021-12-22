@@ -1,6 +1,5 @@
 import path from 'path';
-import { defineUserConfig } from 'vuepress';
-import type { DefaultThemeOptions } from 'vuepress';
+import { defineUserConfig, type DefaultThemeOptions } from 'vuepress';
 
 export default defineUserConfig<DefaultThemeOptions>({
   base: '/',
@@ -85,6 +84,20 @@ export default defineUserConfig<DefaultThemeOptions>({
   },
   bundler: '@vuepress/vite',
   bundlerConfig: {},
+  dest: 'docs/.vuepress/dist',
+  temp: 'docs/.vuepress/.temp',
+  cache: 'docs/.vuepress/.cache',
+  public: 'docs/.vuepress/public',
+  markdown: {},
+  debug: false,
+  host: '0.0.0.0',
+  port: 8080,
+  open: true,
+  pagePatterns: ['**/*.md', '!.vuepress'],
+  templateDev: 'node_modules/@vuepress/client/templates/index.dev.html',
+  templateSSR: 'node_modules/@vuepress/client/templates/index.ssr.html',
+  shouldPreload: true,
+  shouldPrefetch: false,
   plugins: [
     // ['@vuepress/back-to-top', {}],
     // ['@vuepress/medium-zoom', {}],

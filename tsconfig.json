@@ -32,5 +32,5 @@
     // Completeness
     "skipLibCheck": true
   },
-  "include": ["docs/.vuepress/components/**/*"]
+  "include": ["**/.vuepress/**/*"],
 }
