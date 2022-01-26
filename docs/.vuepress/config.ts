@@ -88,20 +88,27 @@ export default defineUserConfig<DefaultThemeOptions>({
   temp: 'docs/.vuepress/.temp',
   cache: 'docs/.vuepress/.cache',
   public: 'docs/.vuepress/public',
-  markdown: {},
   debug: false,
+  pagePatterns: ['**/*.md', '!.vuepress', '!node_modules'],
   host: '0.0.0.0',
   port: 8080,
   open: true,
-  pagePatterns: ['**/*.md', '!.vuepress'],
   templateDev: 'node_modules/@vuepress/client/templates/index.dev.html',
-  templateSSR: 'node_modules/@vuepress/client/templates/index.ssr.html',
   shouldPreload: true,
   shouldPrefetch: false,
+  templateBuild: 'node_modules/@vuepress/client/templates/index.build.html',
+  markdown: {},
   plugins: [
     // ['@vuepress/back-to-top', {}],
     // ['@vuepress/medium-zoom', {}],
     // ['@vuepress/nprogress', {}],
+    [
+      '@vuepress/register-components',
+      {
+        componentsDir: path.resolve(__dirname, 'components'),
+      },
+    ],
+    ['@vuepress/search', {}],
     ['@vuepress/pwa', {}],
     [
       '@vuepress/pwa-popup',
@@ -114,12 +121,6 @@ export default defineUserConfig<DefaultThemeOptions>({
         },
       },
     ],
-    [
-      '@vuepress/register-components',
-      {
-        componentsDir: path.resolve(__dirname, 'components'),
-      },
-    ],
-    ['@vuepress/search', {}],
+    // ['@vuepress/plugin-active-header-links', {}],
   ],
 });
