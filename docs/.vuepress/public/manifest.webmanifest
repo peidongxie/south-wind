@@ -59,9 +59,9 @@
   "orientation": "natural",
   "start_url": "/",
   "id": "/",
-  "theme_color": "#fff",
+  "theme_color": "#3eaf7c",
   "related_applications": [],
   "prefer_related_applications": true,
-  "background_color": "#fff",
+  "background_color": "#ffffff",
   "shortcuts": []
 }
