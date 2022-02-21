@@ -8,13 +8,13 @@
   <img src="https://img.shields.io/github/package-json/v/peidongxie/south-wind" />
 </p>
 
-"晋沐南风"官方网站
+“晋沐南风”官方网站
 
 “晋沐南风”是南京大学在读山西学子发起的长期支教活动。欢迎访问[官方网站](https://southwind.peaceandlove.top)并支持我们！
 
 本项目包含以下内容：
 
-- 一个基于 VuePress 的静态站点
+- 基于 VuePress 的静态站点
 - 一些工程化配置
 
 ## 内容列表
@@ -22,7 +22,6 @@
 - [背景](#背景)
 - [安装](#安装)
 - [使用](#使用)
-- [示例](#示例)
 - [相关工作](#相关工作)
 - [维护者](#维护者)
 - [如何贡献](#如何贡献)
@@ -69,10 +68,6 @@ $ git clone https://github.com/peidongxie/south-wind
 $ cd south-wind
 $ yarn dev
 ```
-
-## 示例
-
-本项目不提供示例。请参考 VuePress 文档给出的[示例](https://v2.vuepress.vuejs.org/guide/getting-started.html)。
 
 ## 相关工作
 

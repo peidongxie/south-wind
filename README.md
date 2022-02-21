@@ -8,9 +8,9 @@
   <img src="https://img.shields.io/github/package-json/v/peidongxie/south-wind" />
 </p>
 
-The official website of 'Jin Mu Nan Feng'
+The official website of "Jin Mu Nan Feng"
 
-'Jin Mu Nan Feng' is a long-term volunteer teaching program initiated by the students of Nanjing University in Shanxi Province. Welcome to visit [the official website](https://southwind.peaceandlove.top) and support us!
+"Jin Mu Nan Feng" is a long-term volunteer teaching program initiated by the students of Nanjing University in Shanxi Province. Welcome to visit [the official website](https://southwind.peaceandlove.top) and support us!
 
 This project contains:
 
@@ -22,7 +22,6 @@ This project contains:
 - [Background](#background)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Examples](#examples)
 - [Related Efforts](#related-efforts)
 - [Maintainers](#maintainers)
 - [Contributing](#contributing)
@@ -30,7 +29,7 @@ This project contains:
 
 ## Background
 
-SouthWind started with the launch of 'Jin Mu Nan Feng'. In the process of promoting 'Jin Mu Nan Feng', we found that we needed a website that could meet the following characteristics:
+SouthWind started with the launch of "Jin Mu Nan Feng". In the process of promoting "Jin Mu Nan Feng", we found that we needed a website that could meet the following characteristics:
 
 - Well organized with large amounts of text
 - Adaptive or responsive
@@ -69,10 +68,6 @@ or
 ```sh
 $ yarn dev
 ```
-
-## Examples
-
-No examples are provided for this project. Please refer to the [examples](https://v2.vuepress.vuejs.org/guide/getting-started.html) given in the VuePress documentation。
 
 ## Related Efforts
 
