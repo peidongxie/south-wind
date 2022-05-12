@@ -1,7 +1,13 @@
-import path from 'path';
-import { defineUserConfig, type DefaultThemeOptions } from 'vuepress';
+import { viteBundler } from '@vuepress/bundler-vite';
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
+import { pwaPlugin } from '@vuepress/plugin-pwa';
+import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup';
+import { searchPlugin } from '@vuepress/plugin-search';
+import { defaultTheme } from '@vuepress/theme-default';
+import { resolve } from 'path';
+import { defineUserConfig } from 'vuepress';
 
-export default defineUserConfig<DefaultThemeOptions>({
+export default defineUserConfig({
   base: '/',
   lang: 'zh-CN',
   title: '晋沐南风',
@@ -11,8 +17,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
   ],
   locales: {},
-  theme: '@vuepress/default',
-  themeConfig: {
+  theme: defaultTheme({
     locales: {},
     home: '/',
     navbar: [
@@ -81,9 +86,8 @@ export default defineUserConfig<DefaultThemeOptions>({
     toggleDarkMode: '切换夜间模式',
     toggleSidebar: '切换侧边栏',
     themePlugins: {},
-  },
-  bundler: '@vuepress/vite',
-  bundlerConfig: {},
+  }),
+  bundler: viteBundler({}),
   dest: 'docs/.vuepress/dist',
   temp: 'docs/.vuepress/.temp',
   cache: 'docs/.vuepress/.cache',
@@ -92,35 +96,25 @@ export default defineUserConfig<DefaultThemeOptions>({
   pagePatterns: ['**/*.md', '!.vuepress', '!node_modules'],
   host: '0.0.0.0',
   port: 8080,
-  open: true,
-  templateDev: 'node_modules/@vuepress/client/templates/index.dev.html',
+  open: false,
+  templateDev: require.resolve('@vuepress/client/templates/dev.html'),
   shouldPreload: true,
-  shouldPrefetch: false,
-  templateBuild: 'node_modules/@vuepress/client/templates/index.build.html',
+  shouldPrefetch: true,
+  templateBuild: require.resolve('@vuepress/client/templates/build.html'),
   markdown: {},
   plugins: [
-    // ['@vuepress/back-to-top', {}],
-    // ['@vuepress/medium-zoom', {}],
-    // ['@vuepress/nprogress', {}],
-    [
-      '@vuepress/register-components',
-      {
-        componentsDir: path.resolve(__dirname, 'components'),
-      },
-    ],
-    ['@vuepress/search', {}],
-    ['@vuepress/pwa', {}],
-    [
-      '@vuepress/pwa-popup',
-      {
-        locales: {
-          '/': {
-            message: '发现支教新动态～',
-            buttonText: '刷新一下',
-          },
+    registerComponentsPlugin({
+      componentsDir: resolve(__dirname, 'components')
+    }),
+    searchPlugin({}),
+    pwaPlugin({}),
+    pwaPopupPlugin({
+      locales: {
+        '/': {
+          message: '发现支教新动态～',
+          buttonText: '刷新一下',
         },
       },
-    ],
-    // ['@vuepress/plugin-active-header-links', {}],
+    }),
   ],
 });
