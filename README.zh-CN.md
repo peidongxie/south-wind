@@ -42,12 +42,16 @@ SouthWind 始于“晋沐南风”的发起。在宣传“晋沐南风”的过�
 本项目使用 Node.js 和它的包管理器。请确保本地安装了它们。
 
 ```sh
+$ git clone https://github.com/peidongxie/south-wind
+$ cd south-wind
 $ npm install
 ```
 
 或者
 
 ```sh
+$ git clone https://github.com/peidongxie/south-wind
+$ cd south-wind
 $ yarn
 ```
 
@@ -56,16 +60,12 @@ $ yarn
 本项目可以以开发模式启动。
 
 ```sh
-$ git clone https://github.com/peidongxie/south-wind
-$ cd south-wind
 $ npm run dev
 ```
 
 或者
 
 ```sh
-$ git clone https://github.com/peidongxie/south-wind
-$ cd south-wind
 $ yarn dev
 ```
 

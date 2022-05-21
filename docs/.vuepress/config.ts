@@ -104,7 +104,7 @@ export default defineUserConfig({
   markdown: {},
   plugins: [
     registerComponentsPlugin({
-      componentsDir: resolve(__dirname, 'components')
+      componentsDir: resolve(__dirname, 'components'),
     }),
     searchPlugin({}),
     pwaPlugin({}),
