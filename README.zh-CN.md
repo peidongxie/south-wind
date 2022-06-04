@@ -69,6 +69,18 @@ $ npm run dev
 $ yarn dev
 ```
 
+本项目可以为生产环境构建。你可以在 `docs/.vuepress/dist` 目录中看到生产环境构建产物。
+
+```sh
+$ npm run build
+```
+
+或者
+
+```sh
+$ yarn build
+```
+
 ## 相关工作
 
 - [VuePress](https://github.com/vuejs/vuepress)

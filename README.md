@@ -69,6 +69,18 @@ or
 $ yarn dev
 ```
 
+This project can be built for production. You can view the production build in the `docs/.vuepress/dist` directory.
+
+```sh
+$ npm run build
+```
+
+or
+
+```sh
+$ yarn build
+```
+
 ## Related Efforts
 
 - [VuePress](https://github.com/vuejs/vuepress)
