@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Setup environment
-        uses: actions/setup-node@v3.1.1
+        uses: actions/setup-node@v3.3.0
         with:
           cache: 'npm'
           node-version: 'lts/*'
