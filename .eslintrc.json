@@ -9,13 +9,16 @@
     "plugin:prettier/recommended"
   ],
   "globals": {},
+  "overrides": [],
   "parser": "vue-eslint-parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "parser": "@typescript-eslint/parser"
   },
   "plugins": [],
+  "processor": "",
   "rules": {},
   "settings": {},
-  "overrides": []
+  "noInlineConfig": true,
+  "reportUnusedDisableDirectives": true
 }
