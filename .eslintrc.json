@@ -1,4 +1,6 @@
 {
+  "root": true,
+  "ignorePatterns": ["*/.vuepress/.*/", "*/.vuepress/dist/"],
   "env": {
     "browser": true
   },
