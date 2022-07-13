@@ -19,6 +19,8 @@ export default defineUserConfig({
   locales: {},
   theme: defaultTheme({
     locales: {},
+    colorMode: 'auto',
+    colorModeSwitch: true,
     home: '/',
     navbar: [
       { text: '支教详情', link: '/details/summary' },
@@ -27,7 +29,6 @@ export default defineUserConfig({
     ],
     logo: '/img/logo/logo-without-name.png',
     logoDark: '/img/logo/logo-without-name.png',
-    darkMode: true,
     repo: 'peidongxie/south-wind',
     repoLabel: ' ',
     sidebar: [
@@ -83,7 +84,7 @@ export default defineUserConfig({
     notFound: ['未找到相关内容'],
     backToHome: '返回首页',
     openInNewWindow: '在新的窗口中打开',
-    toggleDarkMode: '切换夜间模式',
+    toggleColorMode: '切换颜色模式',
     toggleSidebar: '切换侧边栏',
     themePlugins: {},
   }),
@@ -94,6 +95,7 @@ export default defineUserConfig({
   public: 'docs/.vuepress/public',
   debug: false,
   pagePatterns: ['**/*.md', '!.vuepress', '!node_modules'],
+  permalinkPattern: null,
   host: '0.0.0.0',
   port: 8080,
   open: false,
