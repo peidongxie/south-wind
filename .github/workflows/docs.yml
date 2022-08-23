@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Setup environment
-        uses: actions/setup-node@v3.3.0
+        uses: actions/setup-node@v3.4.1
         with:
           cache: 'npm'
           node-version: 'lts/*'
@@ -22,7 +22,7 @@ jobs:
       - name: Build project
         run: npm run build
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.3.4
+        uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
           branch: gh-pages
           folder: docs/.vuepress/dist
