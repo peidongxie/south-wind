@@ -4,8 +4,11 @@ import { pwaPlugin } from '@vuepress/plugin-pwa';
 import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup';
 import { searchPlugin } from '@vuepress/plugin-search';
 import { defaultTheme } from '@vuepress/theme-default';
+import { createRequire } from 'module';
 import { resolve } from 'path';
 import { defineUserConfig } from 'vuepress';
+
+const require = createRequire(import.meta.url);
 
 export default defineUserConfig({
   base: '/',
