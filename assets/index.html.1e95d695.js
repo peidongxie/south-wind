@@ -1,1 +1,1 @@
-const e=JSON.parse('{"key":"v-7e978520","path":"/courses/","title":"\u8BFE\u7A0B\u5217\u8868","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1630288520000},"filePathRelative":"courses/README.md"}');export{e as data};
+const e=JSON.parse('{"key":"v-7e978520","path":"/courses/","title":"课程列表","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1630288520000},"filePathRelative":"courses/README.md"}');export{e as data};
