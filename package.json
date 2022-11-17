@@ -32,9 +32,10 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
     "@vuepress/bundler-vite": "next",
+    "@vuepress/client": "next",
     "@vuepress/plugin-back-to-top": "next",
     "@vuepress/plugin-medium-zoom": "next",
     "@vuepress/plugin-nprogress": "next",
@@ -51,7 +52,8 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "sort-package-json": "^2.1.0",
-    "typescript": "^4.8.4",
+    "typescript": "^4.9.3",
+    "vue": "^3.2.45",
     "vuepress": "next"
   }
 }
