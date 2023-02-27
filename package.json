@@ -31,7 +31,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@types/node": "^18.14.0",
+    "@types/node": "^18.14.2",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
     "@vuepress/bundler-vite": "next",
@@ -44,7 +44,7 @@
     "@vuepress/plugin-register-components": "next",
     "@vuepress/plugin-search": "next",
     "@vuepress/theme-default": "next",
-    "eslint": "^8.34.0",
+    "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.9.0",
