@@ -24,10 +24,10 @@
   },
   "type": "commonjs",
   "scripts": {
-    "build": "vuepress build docs",
-    "dev": "vuepress dev docs",
-    "fix": "eslint docs/.vuepress --ext .ts,.vue --fix",
-    "lint": "eslint docs/.vuepress --ext .ts,.vue",
+    "build:docs": "vuepress build docs",
+    "dev:docs": "vuepress dev docs",
+    "fix:docs": "eslint docs/.vuepress --ext .ts,.vue --fix",
+    "lint:docs": "eslint docs/.vuepress --ext .ts,.vue",
     "prepare": "husky install"
   },
   "devDependencies": {
