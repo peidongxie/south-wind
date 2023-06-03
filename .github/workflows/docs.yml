@@ -1,11 +1,9 @@
 name: docs
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 jobs:
-  docs:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -20,10 +18,27 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build project
-        run: npm run build
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.4.2
+        run: npm run build:docs
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v1.0.8
         with:
-          branch: gh-pages
-          folder: docs/.vuepress/dist
-          clean-exclude: CNAME
+          path: docs/.vuepress/dist
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        name: Deploy GitHub Pages site
+        uses: actions/deploy-pages@v2.0.1
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+permissions:
+  contents: read
+  id-token: write
+  pages: write
