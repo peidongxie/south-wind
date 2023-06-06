@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3.5.2
+        uses: actions/checkout@v3.5.3
         with:
           fetch-depth: 0
       - name: Setup environment
@@ -20,7 +20,7 @@ jobs:
       - name: Build project
         run: npm run build:docs
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v1.0.8
+        uses: actions/upload-pages-artifact@v1.0.9
         with:
           path: docs/.vuepress/dist
   deploy:
@@ -32,7 +32,7 @@ jobs:
     steps:
       - id: deployment
         name: Deploy GitHub Pages site
-        uses: actions/deploy-pages@v2.0.1
+        uses: actions/deploy-pages@v2.0.2
 on:
   push:
     branches:
