@@ -31,6 +31,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@tsconfig/strictest": "^2.0.2",
     "@types/node": "^20.11.7",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
