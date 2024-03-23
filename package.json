@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.3",
-    "@types/node": "^20.11.28",
+    "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "@vuepress/bundler-vite": "next",
@@ -53,8 +53,9 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "sort-package-json": "^2.8.0",
-    "typescript": "^5.4.2",
+    "typescript": "^5.4.3",
     "vue": "^3.4.21",
     "vuepress": "next"
-  }
+  },
+  "packageManager": "pnpm@8.14.1+sha256.2df78e65d433d7693b9d3fbdaf431b2d96bb4f96a2ffecd51a50efe16e50a6a8"
 }
