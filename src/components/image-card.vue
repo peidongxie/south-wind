@@ -101,8 +101,8 @@ export default defineComponent({
 <style>
 .card {
   margin: 20px;
-  background-color: var(--c-bg);
-  border-color: var(--c-border);
+  background-color: var(--vp-c-bg);
+  border-color: var(--vp-c-border);
   border-radius: 6px;
   border-style: solid;
   border-width: 1px;
@@ -119,14 +119,14 @@ export default defineComponent({
 }
 
 .info-top {
-  color: var(--c-text);
+  color: var(--vp-c-text-1);
   display: block;
   font-size: 16px;
 }
 
 .info-bottom {
   margin-top: 8px;
-  color: var(--c-text-lightest);
+  color: var(--vp-c-text-3);
   display: block;
   font-size: 14px;
 }

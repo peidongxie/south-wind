@@ -1,6 +1,6 @@
 {
   "extends": ["@tsconfig/strictest/tsconfig.json"],
-  "include": ["*/.vuepress/**/*.ts"],
+  "include": [".vitepress/**/*.ts", "src/**/*.vue"],
   "exclude": [],
   "compilerOptions": {
     "jsx": "react-jsx",
@@ -8,6 +8,6 @@
     "module": "es2020",
     "moduleResolution": "bundler",
     "noEmit": true,
-    "target": "es2020",
-  },
+    "target": "es2020"
+  }
 }

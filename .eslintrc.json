@@ -1,6 +1,6 @@
 {
   "root": true,
-  "ignorePatterns": ["*/.vuepress/.*/", "*/.vuepress/dist/"],
+  "ignorePatterns": ["cache/*", "dist/*"],
   "env": {
     "browser": true
   },
