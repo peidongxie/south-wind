@@ -1,2 +1,2 @@
-docs/** linguist-documentation=false
-docs/**/*.md linguist-language=HTML
+src/** linguist-documentation=false
+src/**/*.md linguist-language=HTML
