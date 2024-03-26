@@ -1,10 +1,41 @@
+<script setup lang="ts">
+import { computed, defineProps } from 'vue';
+
+const props = defineProps({
+  img: {
+    type: String,
+    default: '/img/logo/logo-with-name.png',
+  },
+  text: {
+    type: String,
+    default: '活动掠影',
+  },
+  date: {
+    type: String,
+    default: () => {
+      const today = new Date();
+      const year = today.getFullYear();
+      const month = today.getMonth() + 1;
+      const day = today.getDate();
+      return `${year}年${month}月${day}日`;
+    },
+  },
+});
+const file = computed(() => {
+  const text = props.text;
+  const index = props.img.lastIndexOf('.');
+  const extension = props.img.substring(index);
+  return text + extension;
+});
+</script>
+
 <template>
   <div class="card">
     <img class="image" :src="img" :alt="text" />
     <div class="info">
       <span class="info-top">{{ text }}</span>
       <span class="info-bottom">
-        <time>{{ date || today }}</time>
+        <time>{{ date }}</time>
         <button>
           <a :href="img" :download="file">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -51,7 +82,7 @@
                   s 9 20 20 20
                   s 20 -9 20 -20
                   z
-                "
+                  "
               ></path>
             </svg>
           </a>
@@ -60,43 +91,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import { computed, defineComponent, ref, toRefs } from 'vue';
-export default defineComponent({
-  props: {
-    img: {
-      type: String,
-      default: '/img/logo/logo-with-name.png',
-    },
-    text: {
-      type: String,
-      default: '活动掠影',
-    },
-    date: {
-      type: String,
-      default: '',
-    },
-  },
-  setup(props) {
-    const { img, text } = toRefs(props);
-    const file = computed(() => {
-      const index = img.value.lastIndexOf('.');
-      const extension = img.value.substr(index);
-      return text.value + extension;
-    });
-    const date = new Date();
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
-    const today = ref(`${year}年${month}月${day}日`);
-    return {
-      file,
-      today,
-    };
-  },
-});
-</script>
 
 <style>
 .card {
