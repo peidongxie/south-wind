@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, defineProps } from 'vue';
+import { computed } from 'vue';
 
 const props = defineProps({
   img: {
@@ -31,16 +31,15 @@ const file = computed(() => {
 
 <template>
   <div class="card">
-    <img class="image" :src="img" :alt="text" />
+    <img :alt="text" class="image" :src="img" />
     <div class="info">
       <span class="info-top">{{ text }}</span>
       <span class="info-bottom">
         <time>{{ date }}</time>
         <button>
-          <a :href="img" :download="file">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <a :download="file" :href="img">
+            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
               <path
-                fill="currentColor"
                 d="
                   M 216 0
                   h 80
@@ -82,7 +81,8 @@ const file = computed(() => {
                   s 9 20 20 20
                   s 20 -9 20 -20
                   z
-                  "
+                "
+                fill="currentColor"
               ></path>
             </svg>
           </a>
@@ -133,5 +133,9 @@ const file = computed(() => {
   margin: 0;
   background: transparent;
   float: right;
+}
+
+.info-bottom > button > a {
+  color: var(--vp-c-brand-3);
 }
 </style>
